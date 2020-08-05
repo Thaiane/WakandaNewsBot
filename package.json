@@ -1,0 +1,19 @@
+{
+  "name": "tiraopreconceitodasuabocabot",
+  "version": "1.0.0",
+  "description": "Bot para trazer conhecimento de termos preconceituosos utilizados no twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thaiane/TiraOPreconceitoDaSuaBocaBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thaiane/TiraOPreconceitoDaSuaBocaBot/issues"
+  },
+  "homepage": "https://github.com/Thaiane/TiraOPreconceitoDaSuaBocaBot#readme"
+}
