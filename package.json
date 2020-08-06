@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Thaiane/TiraOPreconceitoDaSuaBocaBot/issues"
   },
-  "homepage": "https://github.com/Thaiane/TiraOPreconceitoDaSuaBocaBot#readme"
+  "homepage": "https://github.com/Thaiane/TiraOPreconceitoDaSuaBocaBot#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
 }
