@@ -7,33 +7,14 @@ function postHello() {
     });
 }
 
-const stream = T.stream('statuses/filter', {track: 'Wakanda'});
-
-stream.on('tweet', tweet => {
-    console.log("Achei")
-});
-
-Twitter.get(
-    'search/tweets',
-    { q: getSearchKey(), count: 50, lang: 'en' },
-    function(err, data, response) {
-        let tweetList = [];
-        if (!err) {
-            for (let i = 0; i < data.statuses.length; i++) {
-                let tweet = data.statuses[i];
-                tweetList.push(tweet);
-            }
-            callback(tweetList);
-            return;
-        } else {
-            console.log(err);
-        }
-    }
-);
+function search() {
+    Twitter.get('search/tweets', { q: 'wakanda', count: 100 }, function(err, data, response) {
+        console.log(data)
+    })
 }
 
 function main() {
-    postHello();
+    search();
 }
 
 main();
