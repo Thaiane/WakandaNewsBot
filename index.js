@@ -1,15 +1,9 @@
 var Twit = require('twit');
 var Twitter = new Twit(require('./config.js'));
 
-function postHello() {
-    Twitter.post('statuses/update', { status: 'Hello Wakanda!' }, function(err, data, response) {
-        console.log(data)
-    });
-}
-
 function search(callback) {
     console.log('search')
-    Twitter.get('search/tweets', { q: 'wakanda', count: 3, lang: 'pt' },
+    Twitter.get('search/tweets', { q: '#wakanda', count: 3, lang: 'pt' },
         function(err, data, response) {
             if (!err) {
                 for (let i = 0; i < data.statuses.length; i++) {
@@ -32,7 +26,7 @@ function retweet(tweet) {
         'statuses/retweet/:id',
         { id: tweet.id_str },
         function(err, data, response) {
-            if (err) {  // here
+            if (err) {
                 console.log(err.message);
                 return;
             }
