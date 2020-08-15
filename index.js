@@ -3,7 +3,7 @@ var Twitter = new Twit(require('./config.js'));
 
 function search(callback) {
     console.log('search')
-    Twitter.get('search/tweets', { q: '#wakanda', count: 3, lang: 'pt' },
+    Twitter.get('search/tweets', { q: '#wakanda', count: 10, lang: 'pt-br' },
         function(err, data, response) {
             if (!err) {
                 for (let i = 0; i < data.statuses.length; i++) {
